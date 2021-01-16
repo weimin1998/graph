@@ -52,7 +52,7 @@ public class Graph<T> {
     /******************************************************/
 
     // 得到第一个邻接顶点的下标
-    public int getFirstNeighbor(int index) {
+    private int getFirstNeighbor(int index) {
         for (int i = 0; i < nodes.size(); i++) {
             if (edgs[index][i] == 1) {
                 return i;
@@ -62,7 +62,7 @@ public class Graph<T> {
     }
 
     // 根据前一个邻接顶点的下标，获取下一个邻接顶点的下标
-    public int getNextNeighbor(int index, int firstNeighbor) {
+    private int getNextNeighbor(int index, int firstNeighbor) {
         for (int i = firstNeighbor + 1; i < nodes.size(); i++) {
             if (edgs[index][i] == 1) {
                 return i;
